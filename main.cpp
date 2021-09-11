@@ -3,10 +3,13 @@
 
 using namespace std;
 
-struct dog {
+struct Dog {
   int age;
   int weight;
+  char name;
 };
+
+struct Dog d3;
 
 int main() {
   int numbers[5] = {1,2,3,4,5};
@@ -18,10 +21,15 @@ int main() {
   for (int i:numbers) {
     printf("%d\n", i);
   }
+  printf("\n\n");
   // struct 1
-  struct dog oneDog;
-  oneDog.age = 2;
-  oneDog.weight = 10;
-  printf("%d\n\n", oneDog.age);
+  struct Dog oneDog;
+  oneDog.age = 1;
+  oneDog.weight = 20;
+  printf("%d\n", oneDog.age);
+  printf("\n\n");
+  // struct 2
+  struct Dog d2={10,4};
+  printf("%d\n", d2.weight);
   return 0;
 }
