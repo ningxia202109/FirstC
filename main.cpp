@@ -17,6 +17,13 @@ int add (int a, int b) {
   return a+b;
 }
 
+int addPoint (int *a, int *b) {
+  return *a+*b;
+}
+
+int addRef (int &a, int &b) {
+  return a+b;
+}
 int main() {
   int numbers[5] = {1,2,3,4,5};
   // for loop
@@ -65,6 +72,11 @@ int main() {
 
   // function
   printf("function 1 >> %d\n", add(2,3));
+  int a=2, b=5, resultPoint, resultRef;
+  resultPoint = addPoint(&a, &b);
+  resultRef = addRef(a,b);
+  printf("function 2 >> %d\n", resultRef);
+  printf("function 3 >> %d\n", resultRef);
 
   return 0;
 }
