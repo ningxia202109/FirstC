@@ -9,21 +9,20 @@ struct Dog {
   int weight;
   char name;
 };
-
 struct Dog d3;
 
 // function
 int add (int a, int b) {
   return a+b;
 }
-
 int addPoint (int *a, int *b) {
   return *a+*b;
 }
-
 int addRef (int &a, int &b) {
   return a+b;
 }
+
+
 int main() {
   int numbers[5] = {1,2,3,4,5};
   // for loop
