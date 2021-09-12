@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// struct
 struct Dog {
   int age;
   int weight;
@@ -10,6 +11,11 @@ struct Dog {
 };
 
 struct Dog d3;
+
+// function
+int add (int a, int b) {
+  return a+b;
+}
 
 int main() {
   int numbers[5] = {1,2,3,4,5};
@@ -58,7 +64,8 @@ int main() {
   dps2->age=2;
   printf("point to struct 2 >> %d\n", dps2->age);
 
-
+  // function
+  printf("function 1 >> %d\n", add(2,3));
 
   return 0;
 }
