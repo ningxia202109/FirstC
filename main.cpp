@@ -36,19 +36,17 @@ int main() {
   printf("struct 2 >> %d\n", d2.weight);
   
   // point
-  int *p1 = numbers;
-  int *p2;
+  int *p1 = numbers, *p2, *p3=new int[5];
   p2 = &numbers[4];
   printf("point 1 >> %d, %d\n", *p1, *p2);
   for (int i=0;i<5;i++)
   printf("point 2 >> %d\n", p1[i]);
 
-  int *p3=new int[5];
   for (int i=0;i<5;i++) {
     p3[i]=i*3;
     printf("point 3 >> %d\n", p3[i]);
   }
-  delete [] p3;
+  delete [] p3; // delete new
 
   // reference
   int &ref1 = numbers[1];
@@ -63,6 +61,7 @@ int main() {
   // dps2=(struct Dog *)malloc(sizeof(struct Dog)); (C)
   dps2->age=2;
   printf("point to struct 2 >> %d\n", dps2->age);
+  delete dps2; // delete new
 
   // function
   printf("function 1 >> %d\n", add(2,3));
