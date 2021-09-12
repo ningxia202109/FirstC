@@ -44,6 +44,20 @@ int main() {
   }
   delete [] p3;
 
+  // reference
+  int &ref1 = numbers[1];
+  // Cannot bind >> int &ref2 = numbers;
+  printf("reference 1 >> %d\n", ref1);
+
+  // point to struct
+  struct Dog *dps1 = &oneDog;
+  printf("point to struct 1 >> %d\n", dps1->age);
+
+  struct Dog *dps2 = new Dog;
+  // dps2=(struct Dog *)malloc(sizeof(struct Dog)); (C)
+  dps2->age=2;
+  printf("point to struct 2 >> %d\n", dps2->age);
+
 
 
   return 0;
